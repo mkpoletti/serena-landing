@@ -57,13 +57,14 @@
   });
   $$('a[href^="#"]').forEach((a) => a.addEventListener("click", (e) => {
     const id = a.getAttribute("href");
-    if (id.length < 2) return;
+    if (id.length < 2 || id[0] !== "#") return;
     e.preventDefault(); fecharMenu(); irPara(id);
   }));
 
   if (whats && S.whatsapp) {
     const num = String(S.whatsapp.numero || "").replace(/\D/g, "");
     whats.href = `https://wa.me/${num}?text=${encodeURIComponent(S.whatsapp.mensagem || "")}`;
+    $$("[data-whats-link]").forEach((l) => { l.href = whats.href; l.target = "_blank"; l.rel = "noopener"; });
   }
 
   /* ── Divide títulos em palavras (para a revelação) ──────────────────── */
@@ -159,7 +160,7 @@
       setasProd[0].disabled = pAtual === 0;
     };
     if (!anima) { img.src = `assets/img/${p.img}.webp`; aplicarTexto(); desenharMinis(); return; }
-    const nova = img.cloneNode(); nova.src = `assets/img/${p.img}.webp`; nova.removeAttribute("data-prod-img");
+    const nova = img.cloneNode(); nova.src = `assets/img/${p.img}.webp`; nova.removeAttribute("data-prod-img"); nova.alt = `Frasco do produto ${p.nome}`;
     caixa.appendChild(nova);
     gsap.timeline({ onComplete: () => { img.src = nova.src; nova.remove(); } })
       .fromTo(nova, { clipPath: dir > 0 ? "inset(0% 0% 0% 100%)" : "inset(0% 100% 0% 0%)", scale: 1.15 }, { clipPath: "inset(0% 0% 0% 0%)", scale: 1, duration: 1.2, ease: "expo.inOut" })
@@ -248,6 +249,7 @@
       if (form.elements._honey.value) return;
       let ok = true;
       $$("[required]", form).forEach((c) => {
+        if (c.type === "checkbox") { c.closest(".aceite").classList.toggle("erro", !c.checked); if (!c.checked) ok = false; return; }
         const v = c.type === "email" ? /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c.value) : c.value.trim().length > 1;
         c.closest(".campo").classList.toggle("erro", !v);
         if (!v) ok = false;

@@ -4,10 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Serena · Cuidado atento para o seu corpo</title>
-  <meta name="description" content="Clínica de bem-estar com nutrição clínica, tratamentos hormonais e dermocosméticos próprios. São Paulo e Lisboa.">
+  <meta name="description" content="Serena: projeto conceito de site para clínica de bem-estar, com nutrição clínica, tratamentos e dermocosméticos. Design e desenvolvimento por Meta Designer.">
   <meta property="og:title" content="Serena · Cuidado atento para o seu corpo">
   <meta property="og:description" content="Uma abordagem gentil ao bem-estar, guiada com atenção por um cuidado que acompanha a sua rotina.">
-  <meta property="og:image" content="assets/img/og.jpg">
+  <meta property="og:image" content="https://mkpoletti.github.io/serena-landing/assets/img/og.jpg">
+  <meta property="og:url" content="https://mkpoletti.github.io/serena-landing/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://mkpoletti.github.io/serena-landing/">
+  <meta name="author" content="Meta Designer">
   <meta name="theme-color" content="#2C3F33">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42 28'%3E%3Ccircle cx='14' cy='14' r='13' fill='none' stroke='%232C3F33' stroke-width='1.6'/%3E%3Ccircle cx='28' cy='14' r='13' fill='none' stroke='%232C3F33' stroke-width='1.6'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -226,7 +232,7 @@
     </div>
     <figure class="prod-grande revela">
       <span class="tag-off" data-off>20% OFF</span>
-      <div class="prod-img"><img src="assets/img/frasco-verde.webp" alt="" data-prod-img></div>
+      <div class="prod-img"><img src="assets/img/frasco-verde.webp" alt="Frasco verde do creme matinal Aurora" data-prod-img></div>
       <a href="#agendar" class="comprar"><span data-prod-preco>Comprar agora (R$ 129)</span><i><svg viewBox="0 0 24 24" fill="none"><path d="M3 9h18l-2 11H5L3 9Z M8 9l4-6 4 6 M9 13v4 M15 13v4" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></svg></i></a>
     </figure>
     <div class="vitrine-dir">
@@ -253,7 +259,7 @@
     </div>
     <div class="depo-corpo">
       <div class="depo-lado">
-        <div class="depo-foto revela"><img src="assets/img/depoimento.webp" alt="" data-depo-foto loading="lazy"></div>
+        <div class="depo-foto revela"><img src="assets/img/depoimento.webp" alt="Retrato da paciente Camila Andrade" data-depo-foto loading="lazy"></div>
         <p class="depo-pag"><b data-depo-pag>1</b> / 3</p>
         <div class="depo-mobile-setas"><button class="seta seta--vidro seta--voltar" aria-label="Depoimento anterior" data-depo="-1"><svg><use href="#seta"/></svg></button><button class="seta seta--vidro" aria-label="Próximo depoimento" data-depo="1"><svg><use href="#seta"/></svg></button></div>
       </div>
@@ -295,7 +301,7 @@
     <div class="agendar-texto">
       <h2 data-split>Conte um pouco sobre você e a gente cuida do resto</h2>
       <p class="sobe">Respondemos em até um dia útil para combinar o melhor horário, na unidade ou por teleconsulta.</p>
-      <figure class="foto foto--agendar revela"><img src="assets/img/sobre-sala.webp" alt="" loading="lazy" data-paralaxe></figure>
+      <figure class="foto foto--agendar revela"><img src="assets/img/sobre-sala.webp" alt="Sala de atendimento da Serena com luz natural e plantas" loading="lazy" data-paralaxe></figure>
     </div>
     <form class="form sobe" novalidate>
       <input type="text" name="_honey" class="mel" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -306,6 +312,7 @@
         <select id="f-trat" name="interesse"><option>Emagrecimento</option><option>Nutrição clínica</option><option>Reposição hormonal</option><option>Antienvelhecimento</option><option>Ainda não sei</option></select>
       </div>
       <div class="campo campo--inteiro"><label for="f-msg">Mensagem</label><textarea id="f-msg" name="mensagem" rows="4" required></textarea></div>
+      <label class="aceite campo--inteiro"><input type="checkbox" name="consentimento" value="sim" required> <span>Autorizo o uso dos meus dados apenas para responder a este contato, conforme a <a href="privacidade.html">Política de privacidade</a> (LGPD).</span></label>
       <button type="submit" class="btn btn--escuro campo--inteiro"><span>Enviar mensagem</span><i><svg><use href="#seta"/></svg><svg><use href="#seta"/></svg></i></button>
       <p class="form-status campo--inteiro" role="status" aria-live="polite"></p>
     </form>
@@ -321,21 +328,21 @@
       <a href="#agendar" class="btn btn--claro"><span>Agendar agora</span><i><svg><use href="#seta"/></svg><svg><use href="#seta"/></svg></i></a>
     </div>
     <dl class="rodape-dados">
-      <dt>Aberto diariamente</dt><dd>09h às 20h</dd>
-      <dt>Dias</dt><dd>Segunda a sexta</dd>
-      <dt>Contato</dt><dd>(+55) 11 4002-8922<br>(+351) 21 555-0124</dd>
-      <dt>E-mail</dt><dd>ola@serena.com.br</dd>
+      <dt>Horário</dt><dd>Segunda a sexta<br>das 9h às 20h</dd>
+      <dt>Contato</dt><dd><a href="#agendar" data-whats-link>Conversar no WhatsApp</a></dd>
+      <dt>E-mail</dt><dd>ola@serena.example</dd>
     </dl>
     <dl class="rodape-dados">
-      <dt>Nossas unidades</dt><dd>Rua Oscar Freire, 1120<br>Jardins, São Paulo – SP<br>01426-000, Brasil<br><br>Av. da Liberdade, 245<br>Lisboa, 1250-142<br>Portugal</dd>
+      <dt>Nossas unidades</dt><dd>Rua Oscar Freire<br>Jardins, São Paulo<br><br>Avenida da Liberdade<br>Lisboa, Portugal</dd>
     </dl>
   </div>
   <div class="rodape-meio">
     <nav aria-label="Rodapé"><a href="#sobre">Sobre</a><a href="#tratamentos">Tratamentos</a><a href="#produtos">Produtos</a><a href="#depoimentos">Depoimentos</a><a href="#duvidas">Dúvidas</a></nav>
-    <div class="redes"><small>Siga-nos</small><div><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="Facebook">Facebook</a><a href="#" aria-label="TikTok">TikTok</a><a href="#" aria-label="YouTube">YouTube</a></div></div>
+    <div class="redes"><small>Projeto conceito por</small><div><a href="https://metadesigner.site/" target="_blank" rel="noopener">Meta Designer</a><a href="https://www.instagram.com/metadesigner_1/" target="_blank" rel="noopener">Instagram</a><a href="#agendar" data-whats-link>WhatsApp</a></div></div>
   </div>
   <p class="rodape-marca" aria-hidden="true">Serena</p>
-  <div class="rodape-base"><span>© <span data-ano>2026</span> Serena Bem-Estar Ltda. Todos os direitos reservados.</span><span><a href="#">Termos e condições</a><a href="#">Política de privacidade</a></span></div>
+  <p class="rodape-aviso">Conteúdo informativo. Não substitui consulta, diagnóstico ou prescrição. Tratamentos hormonais exigem avaliação e acompanhamento de médico registrado no CRM.</p>
+  <div class="rodape-base"><span>© <span data-ano>2026</span> Serena é uma marca fictícia, criada como projeto conceito. Design e desenvolvimento: <a href="https://metadesigner.site/" target="_blank" rel="noopener">Meta Designer</a>.</span><span><a href="privacidade.html">Política de privacidade</a></span></div>
 </footer>
 
 <a class="whats" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">

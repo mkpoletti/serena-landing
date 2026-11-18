@@ -518,3 +518,11 @@ small { font-size: 12px; letter-spacing: .02em; text-transform: uppercase; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
 }
+
+/* ---------- aceite LGPD + aviso ---------- */
+.aceite { display: flex; gap: 12px; align-items: flex-start; font-size: 13px; line-height: 1.5; color: var(--medio); cursor: pointer; }
+.aceite input { width: 20px; height: 20px; margin-top: 1px; flex: none; accent-color: var(--musgo); }
+.aceite a { color: var(--tinta); text-decoration: underline; text-underline-offset: 3px; }
+.aceite.erro span { color: #C2433C; }
+.rodape > .rodape-aviso { font-size: 12px; line-height: 1.5; opacity: .55; margin-top: 28px; max-width: var(--max); }
+.rodape-dados dd a, .rodape-base a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
